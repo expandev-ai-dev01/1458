@@ -7,12 +7,15 @@
  */
 
 import { Router } from 'express';
+import * as taskController from '@/api/v1/internal/task/controller';
 
 const router = Router();
 
 /**
- * @remarks Internal routes will be added here
- * Example: router.use('/task', taskRoutes);
+ * @remarks Task management routes
  */
+router.post('/task', taskController.createHandler);
+router.get('/task', taskController.listHandler);
+router.get('/task/:id', taskController.getHandler);
 
 export default router;

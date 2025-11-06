@@ -5,7 +5,4 @@
  * @module services
  */
 
-/**
- * @remarks Service modules will be exported here
- * Example: export * from './task';
- */
+export * from './task';

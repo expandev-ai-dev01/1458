@@ -6,7 +6,11 @@
  * @category public
  */
 
+import { useNavigate } from 'react-router-dom';
+
 export const HomePage = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="flex min-h-screen items-center justify-center">
       <div className="text-center">
@@ -14,9 +18,12 @@ export const HomePage = () => {
         <p className="mb-8 text-xl text-gray-600">Sistema de Gerenciamento de Tarefas</p>
         <div className="space-y-4">
           <p className="text-gray-700">Bem-vindo ao sistema de gerenciamento de tarefas.</p>
-          <p className="text-sm text-gray-500">
-            A estrutura base está pronta para receber as funcionalidades.
-          </p>
+          <button
+            onClick={() => navigate('/tasks/create')}
+            className="rounded-md bg-blue-600 px-6 py-3 text-white transition-colors hover:bg-blue-700"
+          >
+            Criar Nova Tarefa
+          </button>
         </div>
       </div>
     </div>
