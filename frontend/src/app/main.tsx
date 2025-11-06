@@ -1,0 +1,23 @@
+/**
+ * @module app/main
+ * @summary Application entry point
+ * @type application-entry
+ * @category core
+ */
+
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { App } from './App';
+import '@/assets/styles/globals.css';
+
+const rootElement = document.getElementById('root');
+
+if (!rootElement) {
+  throw new Error('Root element not found');
+}
+
+createRoot(rootElement).render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
